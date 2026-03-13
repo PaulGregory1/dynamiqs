@@ -35,6 +35,8 @@ class SteadyStateGMRESResult(SteadyStateResult):
         return SteadyStateGMRESResult(rho=0)
 
 
+# see :https://github.com/dynamiqs/dynamiqs/pull/1071 for jvp and vjp custom rules
+
 # TODO : since the GMRES from jax.scipy.sparse.linalg is not optimal and it's quality
 #       of convergence strongly depends on the krylov_size parameter, the best would be
 #       to use the gmres implemented by GASPARD BEUGNOT from Alice&Bob,
